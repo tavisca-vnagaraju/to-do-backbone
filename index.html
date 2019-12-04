@@ -10,10 +10,20 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="js/lib/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <div class="input">
+                <input type="text" name="ToDoAdd" id="add-to-do-input" placeholder="Add to Do">
+                <button id="add-to-do-button">Add</button>
+                <i class='fa fa-trash-o delete' id="delete-selected-to-do" > Selected </i>
+                <i class='fa fa-trash-o delete' id="delete-all-to-do" > all </i>
+            </div>
+            <div id="to-do-container"></div>
+        </div>
         <script src="js/lib/jquery-min.js"></script>
         <script src="js/lib/underscore-min.js"></script>
         <script src="js/lib/backbone-min.js"></script>
