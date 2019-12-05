@@ -18,7 +18,8 @@ body {
 
 .disable-label{
 	text-decoration: line-through;
-	color: #00000047;
+	color: #000000;
+	opacity: 0.5;
 }
 .item{
 	flex: 1;
