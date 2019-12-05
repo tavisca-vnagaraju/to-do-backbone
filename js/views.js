@@ -13,11 +13,6 @@ const ToDoView = Backbone.View.extend({
     this.model.trigger("selected", this.model, selected);
     const label = $(event.target).next();
     label.toggleClass("disable-label");
-    // if (selected) {
-    //   label.addClass("disable-label");
-    // } else {
-    //   label.removeClass("disable-label");
-    // }
   },
   render: function() {
     const self = this;
