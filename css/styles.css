@@ -2,5 +2,42 @@
 body {
 	padding: 40px;
 }
+.delete{
+	cursor: pointer;
+	padding: 10px;
+}
+.to-do-item{
+	padding-top: 10px;
+    width: 100%;
+	margin: 0 auto;
+	display: flex;
+	-webkit-box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+	box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+}
 
+.disable-label{
+	text-decoration: line-through;
+	color: #000000;
+	opacity: 0.5;
+}
+.item{
+	flex: 1;
+}
+.container{
+	text-align: center;
+    width: 50%;
+	margin: 0 auto;
+	padding: 10px;
+	-webkit-box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+	box-shadow: -2px 1px 11px -4px rgba(0,0,0,0.75);
+	border-radius: 10px;
+}
+.container .input{
+	padding-bottom:10px ;
+}
+.container .input input{
+	width: 50%;
+}
 body, p { font-size: 24px; }
