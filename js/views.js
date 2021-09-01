@@ -18,7 +18,18 @@ const ToDoView = Backbone.View.extend({
     const self = this;
     $.get("templates/to-do.html",function(data){
         const template = _.template(data);
-        self.$el.html(template(self.model.toJSON()));
+        // var hello = $.parseHTML("<h1>Yesud Ham Ma&amp;#x60;Ala, IL</h1><h2>Yesud Ham Ma&amp;#x60;Ala, IL</h2>");
+        // console.log(hello);
+        // var hello2 = "Yesud Ham Ma&#x60;Ala, IL";
+        // var parsedhello2 = $.parseHTML(hello2);
+        // console.log(parsedhello2);
+
+
+
+        const parser = new DOMParser();
+        const parsedString = parser.parseFromString("Yesud Ham Ma&#x60;Ala, IL","text/html");
+        console.log(parsedString.body.innerText);
+        self.$el.html(parsedString.body.innerText);
     });
     return self;
   }

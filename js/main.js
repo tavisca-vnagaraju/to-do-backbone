@@ -5,14 +5,21 @@ const toDoListView = new ToDoListView({model:toDoList});
 toDoListView.render();
 
 $("#add-to-do-button").click(function(){
+    addToDo();
+});
+$("#add-to-do-input").keypress(function (e) {
+    if (e.which == 13) {
+        addToDo();
+    }
+});
+function addToDo(){
     var inputValue = $("#add-to-do-input").val();
     if(inputValue != ''){
         toDoList.add(new ToDo({name:inputValue}));
         $("#add-to-do-input").val('');
         $("#add-to-do-input").focus();
     }
-});
-
+}
 $("#delete-all-to-do").click(function(){
     toDoList.reset();
 });
